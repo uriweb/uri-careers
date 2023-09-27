@@ -31,3 +31,26 @@ function uri_careers_enqueues() {
 
 }
 add_action( 'wp_enqueue_scripts', 'uri_careers_enqueues' );
+
+/**
+ * Create a shortcode.
+ * The shortcode accepts arguments: before, after
+ * e.g. [uri-careers]
+ */
+
+ function uri_careers_shortcode($attributes, $shortcode) {
+	// normalize attribute keys, lowercase
+    $attributes = array_change_key_case((array)$attributes, CASE_LOWER);
+
+	/ default attributes
+    $attributes = shortcode_atts(array(
+			'before' => '<div class="uri-careers">',
+			'after' => '</div>',
+    ), $attributes, $shortcode);
+
+	ob_start();
+	$output = ob_get_clean();
+	return $output;
+ }
+
+ add_shortcode( 'uri-careers', 'uri_careers_shortcode' );
