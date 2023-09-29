@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'uri_careers_enqueues' );
 	// normalize attribute keys, lowercase
     $attributes = array_change_key_case((array)$attributes, CASE_LOWER);
 
-	/ default attributes
+	// default attributes
     $attributes = shortcode_atts(array(
 			'before' => '<div class="uri-careers">',
 			'after' => '</div>',
@@ -54,3 +54,6 @@ add_action( 'wp_enqueue_scripts', 'uri_careers_enqueues' );
  }
 
  add_shortcode( 'uri-careers', 'uri_careers_shortcode' );
+
+ // require the individual field definitions from a different file
+require_once dirname(__FILE__) . '/inc/uri-careers-fields.php';

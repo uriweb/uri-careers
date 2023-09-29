@@ -61,15 +61,23 @@ function uri_careers_create_program_post_type() {
 		)
 		);
 
-		uri_careers_create_taxonomy();
+		register_taxonomy('careersfrommajors', array (
+			0 => 'careers'
+			), array(
+				'hierarchical' => true,
+				'label' => 'Major to Career',
+				'show_admin_column' => true,
+				'show_ui' => true,
+				'show_in_rest' => true,
+				'query_var' => true,
+				'rewrite' => array('slug' => 'careers'),
+				'singular_label' => 'Career'
+			)
+		);
 }
 add_action( 'init', 'uri_careers_create_program_post_type' );
 
-/**
- * Create a custom career taxonomy for programs
- */
-function uri_program_finder_create_taxonomy() {
-}
+
 
 /**
  * Define the custom fields
@@ -85,7 +93,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					'label' => 'Description',
 					'name' => 'description',
 					'aria-label' => '',
-					'type' => 'wysiwyg',
+					'type' => 'textarea',
 					'instructions' => 'Brief description of major (1-2 sentences)',
 					'required' => 0,
 					'conditional_logic' => 0,
@@ -410,7 +418,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					'label' => 'Featured Story',
 					'name' => 'featured_story',
 					'aria-label' => '',
-					'type' => 'text',
+					'type' => 'wysiwyg',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
