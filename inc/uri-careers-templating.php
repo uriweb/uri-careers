@@ -60,7 +60,7 @@ function uri_careers_get_template( $template_name, $args = array(), $tempate_pat
     
         // Set default plugin templates path.
         if ( ! $default_path ) :
-            $default_path = plugin_dir_path( __FILE__ ) . 'templates/'; // Path to the template folder
+            $default_path = URI_CAREERS_PATH . 'templates/'; // Path to the template folder
         endif;
     
         // Search template file in theme folder.

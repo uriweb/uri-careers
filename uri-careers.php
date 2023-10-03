@@ -18,6 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
+define( 'URI_CAREERS_PATH', plugin_dir_path( __FILE__ ) );
+
 /**
  * Include css and js
  */
