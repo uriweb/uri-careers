@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"../style.built.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAEA,KACI,YAAA","file":"../style.built.css","sourcesContent":["/* ======= STYLES ======= */\n\nmain {\n    padding: 40px;\n}"]}

@@ -61,17 +61,20 @@ function uri_careers_create_program_post_type() {
 		)
 		);
 
-		register_taxonomy('careersfrommajors', array (
-			0 => 'careers'
-			), array(
+		register_taxonomy(
+			'careersfrommajors',
+			array(
+				0 => 'careers',
+			),
+			array(
 				'hierarchical' => true,
 				'label' => 'Major to Career',
 				'show_admin_column' => true,
 				'show_ui' => true,
 				'show_in_rest' => true,
 				'query_var' => true,
-				'rewrite' => array('slug' => 'careers'),
-				'singular_label' => 'Career'
+				'rewrite' => array( 'slug' => 'careers' ),
+				'singular_label' => 'Career',
 			)
 		);
 }
