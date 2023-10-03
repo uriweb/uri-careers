@@ -57,3 +57,6 @@ add_action( 'wp_enqueue_scripts', 'uri_careers_enqueues' );
 
  // require the individual field definitions from a different file
 require_once dirname(__FILE__) . '/inc/uri-careers-fields.php';
+
+// require the templating functions
+require_once dirname(__FILE__) . '/inc/uri-careers-templating.php';
