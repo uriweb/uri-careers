@@ -8,8 +8,9 @@
 	<?php the_title( '<div class="title"><h1>', '</h1></div>' ); ?>
 
 	<?php if ( get_field( 'careers_advising_link' ) ) { ?>
-						<a href="<?php the_field( 'careers_advising_link' ); ?>">Advising link</a>
+						<button><a href="<?php the_field( 'careers_advising_link' ); ?>">Advising</a></button>
 					<?php } ?>
+					<button>Careers</button>
 
 					<h3>Jobs by Industry</h3>
 
@@ -17,23 +18,28 @@
 						<h4><?php the_field( 'industry_a_name' ); ?></h4>
 					<?php } ?>
 
+
 					<?php
 					if ( get_field( 'industry_a_entry_jobs' ) ) {
 						?>
 						<h5>Entry Level</h5>
+						<ul>
 						<?php
 						myFunction( 'industry_a_entry_jobs' );
 					}
 					?>
-	
+					</ul>
+
 	<?php
 	if ( get_field( 'industry_a_experienced_jobs' ) ) {
 		?>
 		<h5>Experienced</h5>
+		<ul>
 		<?php
 		myFunction( 'industry_a_experienced_jobs' );
 	}
 	?>
+	</ul>
 
 <?php if ( get_field( 'industry_b_name' ) ) { ?>
 	<h4><?php the_field( 'industry_b_name' ); ?></h4>
@@ -43,19 +49,23 @@
 if ( get_field( 'industry_b_entry_jobs' ) ) {
 	?>
 						<h5>Entry Level</h5>
+						<ul>
 	<?php
 	myFunction( 'industry_b_entry_jobs' );
 }
 ?>
+</ul>
 
 <?php
 if ( get_field( 'industry_b_experienced_jobs' ) ) {
 	?>
 		<h5>Experienced</h5>
+		<ul>
 	<?php
 	myFunction( 'industry_b_experienced_jobs' );
 }
 ?>
+</ul>
 
 <?php if ( get_field( 'industry_c_name' ) ) { ?>
 	<h4><?php the_field( 'industry_c_name' ); ?></h4>
@@ -65,19 +75,23 @@ if ( get_field( 'industry_b_experienced_jobs' ) ) {
 if ( get_field( 'industry_c_entry_jobs' ) ) {
 	?>
 						<h5>Entry Level</h5>
+						<ul>
 	<?php
 	myFunction( 'industry_c_entry_jobs' );
 }
 ?>
+</ul>
 
 <?php
 if ( get_field( 'industry_c_experienced_jobs' ) ) {
 	?>
 		<h5>Experienced</h5>
+		<ul>
 	<?php
 	myFunction( 'industry_c_experienced_jobs' );
 }
 ?>
+</ul>
 
 
 <?php
