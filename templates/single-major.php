@@ -22,30 +22,81 @@
 						?>
 						<h5>Entry Level</h5>
 						<?php
-						$i_array = get_field( 'industry_a_entry_jobs' );
-						var_dump( str_getcsv( $i_array, ';' ) );
+						myFunction( 'industry_a_entry_jobs' );
 					}
 					?>
 	
 	<?php
 	if ( get_field( 'industry_a_experienced_jobs' ) ) {
 		?>
-						<h5>Experienced</h5>
+		<h5>Experienced</h5>
 		<?php
-		$i_array = get_field( 'industry_a_experienced_jobs' );
-		$t_array = str_getcsv( $i_array, ';' );
-		// $inner_array = explode( ',', $t_array[0] );
-		var_dump( $t_array );
-		// echo  $t_array[1];
-		// var_dump( $inner_array );
-		$arraylength = count( $t_array );
-
-		for ( $x = 0; $x < $arraylength; $x++ ) {
-			$inner_array = explode( ',', $t_array[ $x ] );
-			var_dump( $inner_array );
-		}
+		myFunction( 'industry_a_experienced_jobs' );
 	}
 	?>
+
+<?php if ( get_field( 'industry_b_name' ) ) { ?>
+	<h4><?php the_field( 'industry_b_name' ); ?></h4>
+<?php } ?>
+
+<?php
+if ( get_field( 'industry_b_entry_jobs' ) ) {
+	?>
+						<h5>Entry Level</h5>
+	<?php
+	myFunction( 'industry_b_entry_jobs' );
+}
+?>
+
+<?php
+if ( get_field( 'industry_b_experienced_jobs' ) ) {
+	?>
+		<h5>Experienced</h5>
+	<?php
+	myFunction( 'industry_b_experienced_jobs' );
+}
+?>
+
+<?php if ( get_field( 'industry_c_name' ) ) { ?>
+	<h4><?php the_field( 'industry_c_name' ); ?></h4>
+<?php } ?>
+
+<?php
+if ( get_field( 'industry_c_entry_jobs' ) ) {
+	?>
+						<h5>Entry Level</h5>
+	<?php
+	myFunction( 'industry_c_entry_jobs' );
+}
+?>
+
+<?php
+if ( get_field( 'industry_c_experienced_jobs' ) ) {
+	?>
+		<h5>Experienced</h5>
+	<?php
+	myFunction( 'industry_c_experienced_jobs' );
+}
+?>
+
+
+<?php
+function myFunction( $fieldy ) {
+	$i_array = get_field( $fieldy );
+	$t_array = str_getcsv( $i_array, ';' );
+	$arraylength = count( $t_array );
+
+	for ( $x = 0; $x < $arraylength; $x++ ) {
+			$inner_array = explode( ',', $t_array[ $x ] );
+			$keys = array( $inner_array[0] );
+			$values = array( $inner_array[1] );
+			$array_assoc = array_combine( $keys, $values );
+		foreach ( $array_assoc as $key => $value ) {
+			echo "<li> $key - $value</li><br>";
+		}
+	}
+};
+?>
 
 
 	</article>
