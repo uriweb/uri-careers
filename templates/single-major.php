@@ -189,6 +189,7 @@ function myFunction( $fieldy ) {
 			$array_assoc = array_combine( $keys, $values );
 		foreach ( $array_assoc as $key => $value ) {
 
+			/*
 				$token = strtok( $value, '-' );
 				var_dump( $token );
 
@@ -199,7 +200,17 @@ function myFunction( $fieldy ) {
 			}
 			$hi = implode( '-', $new_value );
 			echo "<tr><td> $key </td><td>$ $value </td></tr><br>";
+			*/
+			$empty_array = array();
+
+			$sal_range = explode( '-', $value );
+			foreach ( $sal_range as $sal ) {
+				$sal1 = "$ $sal,000";
+				array_push( $empty_array, $sal1 );
+				$hi = implode( '-', $empty_array );
+			}
 		}
+		echo "<tr><td> $key </td><td> $hi </td></tr><br>";
 	}
 
 };
