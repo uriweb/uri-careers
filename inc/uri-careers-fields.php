@@ -289,23 +289,6 @@ if ( function_exists( 'register_field_group' ) ) {
 					'append' => '',
 				),
 				array(
-					'key' => 'field_64e4fa7f3b09e',
-					'label' => 'RI Projection Sheet',
-					'name' => 'ri_projection_sheet_',
-					'aria-label' => '',
-					'type' => 'url',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-				),
-				array(
 					'key' => 'field_64e4fa903b09f',
 					'label' => 'Employers hiring our grads',
 					'name' => 'employers',
