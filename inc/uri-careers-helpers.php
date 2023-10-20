@@ -10,50 +10,50 @@ function uri_careers_render_jobs( $field ) {
 				$t_array = str_getcsv( $i_array, ';' );
 				$arraylength = count( $t_array );
 
-				for ( $x = 0; $x < $arraylength; $x++ ) {
-					$inner_array = explode( ',', $t_array[ $x ] );
-					$keys = array( $inner_array[0] );
-					$values = array( $inner_array[1] );
+	for ( $x = 0; $x < $arraylength; $x++ ) {
+		$inner_array = explode( ',', $t_array[ $x ] );
+		$keys = array( $inner_array[0] );
+		$values = array( $inner_array[1] );
 
-					$array_assoc = array_combine( $keys, $values );
-					foreach ( $array_assoc as $key => $value ) {
-						$empty_array = array();
+		$array_assoc = array_combine( $keys, $values );
+		foreach ( $array_assoc as $key => $value ) {
+			$empty_array = array();
 
-						$sal_range = explode( '-', $value );
-						foreach ( $sal_range as $sal ) {
-							$sal1 = "$ $sal,000";
-							array_push( $empty_array, $sal1 );
-							$sal_range2 = implode( '  -  ', $empty_array );
-						}
-						$output2 = "<tr><td> $key </td><td> $sal_range2 </td></tr>";
-					}
-					$output3 .= $output2;
-				}
+			$sal_range = explode( '-', $value );
+			foreach ( $sal_range as $sal ) {
+				$sal1 = "$ $sal,000";
+				array_push( $empty_array, $sal1 );
+				$sal_range2 = implode( '  -  ', $empty_array );
+			}
+			$output2 = "<tr><td> $key </td><td> $sal_range2 </td></tr>";
+		}
+		$output3 .= $output2;
+	}
 				return $output3;
-			};
+};
 
-			function uri_careers_skills_list( $name_field ) {
-				$i_array = get_field( $name_field );
-				$t_array = str_getcsv( $i_array, ',' );
-				// var_dump( $t_array );
-				$listlength = count( $t_array );
+function uri_careers_skills_list( $name_field ) {
+	$i_array = get_field( $name_field );
+	$t_array = str_getcsv( $i_array, ',' );
+	// var_dump( $t_array );
+	$listlength = count( $t_array );
 
-				for ( $x = 0; $x < $listlength; $x++ ) {
-					$output .= "<li> $t_array[$x]</li>";
-				}
-				return $output;
-			}
+	for ( $x = 0; $x < $listlength; $x++ ) {
+		$output .= "<li> $t_array[$x]</li>";
+	}
+	return $output;
+}
 
-			function uri_careers_pipelist( $name_field ) {
-				$i_array = get_field( $name_field );
-				$t_array = str_getcsv( $i_array, ';' );
-				$output = implode( '&nbsp; | &nbsp;', $t_array );
-				echo $output;
-			}
+function uri_careers_pipelist( $name_field ) {
+	$i_array = get_field( $name_field );
+	$t_array = str_getcsv( $i_array, ';' );
+	$output = implode( '&nbsp; | &nbsp;', $t_array );
+	echo $output;
+}
 
-			function uri_careers_table_template( $entry, $experienced ) {
-				$uri_careers_render_jobs = 'uri_careers_render_jobs';
-				$tabledata = <<<table
+function uri_careers_table_template( $entry, $experienced ) {
+	$uri_careers_render_jobs = 'uri_careers_render_jobs';
+	$tabledata = <<<table
 					<h5>Entry Level</h5>
 						<figure class="wp-block-table">
 						<table style="width: 60%;">
@@ -80,13 +80,13 @@ function uri_careers_render_jobs( $field ) {
 					</figure>
 		table;
 
-				return $tabledata;
-			}
-			
+	return $tabledata;
+}
 
-			function render_skills (){
-			 	$major = the_title( '', ' ', false );
-				$uri_careers_skills_list = 'uri_careers_skills_list';
+
+function render_skills() {
+	$major = the_title( '', ' ', false );
+	$uri_careers_skills_list = 'uri_careers_skills_list';
 
 	$skills = <<<content
 	<h4>General competencies:</h4>

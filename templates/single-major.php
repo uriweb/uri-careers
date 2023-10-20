@@ -14,7 +14,7 @@ get_header();
 				<?php
 				if ( function_exists( 'uri_cl_shortcode_button' ) ) {
 					if ( get_field( 'careers_advising_link' ) ) {
-					$advising = get_field( 'careers_advising_link' );
+						$advising = get_field( 'careers_advising_link' );
 					}
 					$career = get_permalink();
 					echo do_shortcode( '[cl-button link="' . $advising . '" text="Advising"][cl-button link="' . $career . '" text="Careers" style="prominent"]' );
@@ -59,34 +59,44 @@ get_header();
 	<div class="alumni-data">
 	<h3>Alumni Data</h3>
 
-	<?php 
-	//check for Employers hiring grads field
-	if ( get_field( 'employers' ) ) { ?>
+	<?php
+	// check for Employers hiring grads field
+	if ( get_field( 'employers' ) ) {
+		?>
 		<h4>Employers Hiring Our Grads</h4>
 				<div class="pipelist">
 				<?php uri_careers_pipelist( 'employers' ); ?>
 			</div>
-			<?php }
-	//check for graduate schools field
-	 if ( get_field( 'grad_schools' ) ) { ?>
+			<?php
+	}
+	// check for graduate schools field
+	if ( get_field( 'grad_schools' ) ) {
+		?>
 				<h4>Graduate Schools Enrolling Our Students</h4>
 				<div class="pipelist">
 				<?php uri_careers_pipelist( 'grad_schools' ); ?>
 			</div>
 			<?php } ?>
 	 </div> <!--end alumni-data -->
-<?php }
+	<?php
+}
 ?>
 			
 
 			<?php if ( get_field( 'skills' ) ) { ?>
+				<div class="skills-panel">
 				<?php
-				
+
 				if ( function_exists( 'uri_cl_shortcode_panel' ) ) {
 					$all_skills = render_skills();
-					echo do_shortcode('[cl-panel title="Skills Employers Desire" img="http://d4.local/wp-content/uploads/2023/10/vecteezy_a-colorful-stack-of-textbooks-on-a-desk-background-with_29288801_805.jpg"]
-					'. $all_skills. '[/cl-panel]');
+					echo do_shortcode(
+						'[cl-panel title="Skills Employers Desire" img="http://d4.local/wp-content/uploads/2023/10/vecteezy_a-colorful-stack-of-textbooks-on-a-desk-background-with_29288801_805.jpg"]
+					' . $all_skills . '[/cl-panel]'
+						);
 				}
+				?>
+				</div>
+				<?php
 			}
 			?>
 
@@ -104,7 +114,6 @@ get_header();
 			?>
 
 			<?php if ( function_exists( 'uri_cl_shortcode_card' ) ) { ?>
-				<hr>
 				<div class="three-cards">
 					<div class="wp-block-columns">
 						<div class="wp-block-column">
