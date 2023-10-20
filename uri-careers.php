@@ -66,3 +66,6 @@ require_once dirname( __FILE__ ) . '/inc/uri-careers-fields.php';
 
 // require the templating functions
 require_once dirname( __FILE__ ) . '/inc/uri-careers-templating.php';
+
+// require the helper functions
+require_once dirname( __FILE__ ) . '/inc/uri-careers-helpers.php';
