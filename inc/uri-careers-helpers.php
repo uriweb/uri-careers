@@ -9,27 +9,28 @@ function uri_careers_render_jobs( $field ) {
 				$i_array = get_field( $field );
 				$t_array = str_getcsv( $i_array, ';' );
 				$arraylength = count( $t_array );
+				$output3 = null;
 
 	for ( $x = 0; $x < $arraylength; $x++ ) {
 		$inner_array = explode( ',', $t_array[ $x ] );
 		$keys = array( $inner_array[0] );
 		$values = array( $inner_array[1] );
-
 		$array_assoc = array_combine( $keys, $values );
-		foreach ( $array_assoc as $key => $value ) {
-			$empty_array = array();
 
+		foreach ( $array_assoc as $key => $value ) {
+			$salary_array = array();
 			$sal_range = explode( '-', $value );
+
 			foreach ( $sal_range as $sal ) {
 				$sal1 = "$ $sal,000";
-				array_push( $empty_array, $sal1 );
-				$sal_range2 = implode( '  -  ', $empty_array );
+				array_push( $salary_array, $sal1 );
+				$sal_range2 = implode( '  -  ', $salary_array );
 			}
 			$output2 = "<tr><td> $key </td><td> $sal_range2 </td></tr>";
 		}
 		$output3 .= $output2;
 	}
-				return $output3;
+	return $output3;
 };
 
 function uri_careers_skills_list( $name_field ) {
@@ -37,6 +38,7 @@ function uri_careers_skills_list( $name_field ) {
 	$t_array = str_getcsv( $i_array, ',' );
 	// var_dump( $t_array );
 	$listlength = count( $t_array );
+	global $output;
 
 	for ( $x = 0; $x < $listlength; $x++ ) {
 		$output .= "<li> $t_array[$x]</li>";
