@@ -32,6 +32,7 @@ get_header();
 					if ( get_field( 'industry_a_entry_jobs' ) || get_field( 'industry_a_experienced_jobs ' ) ) {
 						$industry_a_jobs = uri_careers_table_template( 'industry_a_entry_jobs', 'industry_a_experienced_jobs' );
 					}
+					$build_shortcode = null;
 					$build_shortcode .= '[cl-tab title="' . $industry_a . '"]' . $industry_a_jobs . '[/cl-tab]';
 				}
 				if ( get_field( 'industry_b_name' ) ) {
@@ -101,15 +102,13 @@ get_header();
 			?>
 
 			<?php
-			if ( get_field( 'featured_story' ) ) {
-				?>
-<div class="story">
-				<h4>Student/Alumni Story</h4>
-				<?php
-				the_field( 'featured_story' );
-				?>
-				</div>
-				<?php
+			if ( function_exists( 'uri_cl_shortcode_breakout' ) ) {
+				$story = get_field( 'featured_story' );
+				echo do_shortcode( '[cl-breakout]<h4>Student/Alumni Story</h4>' . $story . '[/cl-breakout]' );
+				if ( get_field( 'featured_story' ) ) {
+					?>
+					<?php
+				}
 			}
 			?>
 
