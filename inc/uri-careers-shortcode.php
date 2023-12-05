@@ -16,14 +16,30 @@ function uri_careers_toggle_shortcode( $attributes ) {
 	// default attributes
 	$attributes = shortcode_atts(
 	  array(
+		  'advising_link' => null,
 		  'careers_link' => null,
 	  ),
 	 $attributes,
 	 );
 
-	if ( null !== $attributes['careers_link'] ) {
-		return uri_careers_toggle( $attributes['careers_link'] );
+	if ( null === $attributes['advising_link'] && null === $attributes['careers_link'] ) {
+		$link_careers = get_permalink();
+		$link_advising = get_permalink();
+		$button_style = array( 'disabled', 'disabled' );
 	}
+
+	if ( null !== $attributes['advising_link'] && null === $attributes['careers_link'] ) {
+		$link_careers = get_permalink();
+		$link_advising = $attributes['advising_link'];
+		$button_style = array( 'prominent', 'disabled' );
+	}
+	if ( null !== $attributes['careers_link'] && null === $attributes['advising_link'] ) {
+		$link_careers = $attributes['careers_link'];
+		$link_advising = get_permalink();
+		$button_style = array( 'disabled', 'prominent' );
+	}
+	return uri_careers_toggle( $link_careers, $link_advising, $button_style );
+
 }
 
   add_shortcode( 'uri-careers-toggle', 'uri_careers_toggle_shortcode' );

@@ -9,18 +9,12 @@ get_header();
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<div class="center">
-
-				<?php
-				if ( function_exists( 'uri_cl_shortcode_button' ) ) {
-					if ( get_field( 'careers_advising_link' ) ) {
-						$advising = get_field( 'careers_advising_link' );
-					}
-					$career = get_permalink();
-					echo do_shortcode( '[cl-button link="' . $advising . '" text="Advising"][cl-button link="' . $career . '" text="Careers" style="prominent"]' );
-				}
-				?>
-			</div>
+		<?php
+		if ( get_field( 'careers_advising_link' ) ) {
+			$advising = get_field( 'careers_advising_link' );
+		}
+				echo do_shortcode( '[uri-careers-toggle advising_link="' . $advising . '"]' );
+		?>
 
 			<div class="career-data">
 
