@@ -60,7 +60,7 @@ require_once dirname( __FILE__ ) . '/inc/uri-careers-templating.php';
 require_once dirname( __FILE__ ) . '/inc/uri-careers-helpers.php';
 
 // include shortcode
-include( URI_CAREERS_PATH . 'inc/uri-careers-shortcode.php');
+include( URI_CAREERS_PATH . 'inc/uri-careers-shortcode.php' );
 
 // include toggle
-include( URI_CAREERS_PATH . 'templates/toggle.php');
+include( URI_CAREERS_PATH . 'templates/toggle.php' );
