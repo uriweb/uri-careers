@@ -1,7 +1,9 @@
 <?php
 /**
- * functions for finding templates.
+ * Functions for finding templates.
  * http://jeroensormani.com/how-to-add-template-files-in-your-plugin/
+ *
+ * @package uri-careers
  */
 
 /**
@@ -15,7 +17,7 @@
  *
  * @param string $template_name          Template to load.
  * @param array  $args                   Args passed for the template file.
- * @param string $string $template_path  Path to templates.
+ * @param string $template_path          Path to templates.
  * @param string $default_path           Default path to template files.
  */
 function uri_careers_get_template( $template_name, $args = array(), $tempate_path = '', $default_path = '' ) {
@@ -49,7 +51,6 @@ function uri_careers_get_template( $template_name, $args = array(), $tempate_pat
  * @param   string $default_path           Default path to template files.
  * @return  string  Path to the template file.
  */
-
 function uri_careers_locate_template( $template_name, $template_path = '', $default_path = '' ) {
 
 	   // Set variable to search in woocommerce-plugin-templates folder of theme.

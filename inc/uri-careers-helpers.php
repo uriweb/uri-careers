@@ -5,7 +5,6 @@
  *
  * @package uri-careers
  */
-
 function uri_careers_render_jobs( $field ) {
 	$i_array = get_field( $field );
 	$t_array = str_getcsv( $i_array, ';' );
@@ -33,7 +32,9 @@ function uri_careers_render_jobs( $field ) {
 	}
 	return $output3;
 };
-
+/**
+ * Build the list of skills
+ */
 function uri_careers_skills_list( $name_field ) {
 	$i_array = get_field( $name_field );
 	$t_array = str_getcsv( $i_array, ',' );
@@ -47,6 +48,9 @@ function uri_careers_skills_list( $name_field ) {
 	return $output;
 }
 
+/**
+ * Parse the list of skills with a pipe as delimeter
+ */
 function uri_careers_pipelist( $name_field ) {
 	$i_array = get_field( $name_field );
 	$t_array = str_getcsv( $i_array, ';' );
@@ -54,6 +58,9 @@ function uri_careers_pipelist( $name_field ) {
 	return $output;
 }
 
+/**
+ * Build the list of alumni data
+ */
 function uri_careers_render_alumni_data() {
 	 $uri_employers = uri_careers_pipelist( 'employers' );
 	$uri_grad_schools = uri_careers_pipelist( 'grad_schools' );
@@ -84,6 +91,9 @@ function uri_careers_render_alumni_data() {
 	return $output;
 }
 
+/**
+ * Build the tables of data for top careers
+ */
 function uri_careers_table_template( $entry, $experienced ) {
 	$uri_careers_render_jobs = 'uri_careers_render_jobs';
 	$tabledata = <<<table
@@ -116,7 +126,9 @@ function uri_careers_table_template( $entry, $experienced ) {
 	return $tabledata;
 }
 
-
+/**
+ * Output the list of skills
+ */
 function uri_careers_render_skills() {
 	$major = the_title( '', ' ', false );
 	$uri_careers_skills_list = 'uri_careers_skills_list';
@@ -152,6 +164,9 @@ function uri_careers_render_skills() {
 	return $skills;
 }
 
+/**
+ * Build the cards
+ */
 function uri_careers_render_cards() {
 	$card_1 = '[cl-card title="Center for Career & Experiential Education" body="" img="http://d4.local/wp-content/uploads/2023/10/Screenshot-2023-10-17-at-2.12.50 PM.png" link="https://web.uri.edu/career/" button="Learn More"]';
 	$card_2 = '[cl-card title="Academic Enhancement Center" body="" img="http://d4.local/wp-content/uploads/2023/10/Screenshot-2023-10-17-at-2.12.50 PM.png" link="https://web.uri.edu/aec/" button="Learn More"]';
