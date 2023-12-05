@@ -17,7 +17,7 @@
  *
  * @param string $template_name          Template to load.
  * @param array  $args                   Args passed for the template file.
- * @param string $template_path          Path to templates.
+ * @param string $tempate_path          Path to templates.
  * @param string $default_path           Default path to template files.
  */
 function uri_careers_get_template( $template_name, $args = array(), $tempate_path = '', $default_path = '' ) {
@@ -47,7 +47,7 @@ function uri_careers_get_template( $template_name, $args = array(), $tempate_pat
  * 3. /plugins/uri-careers/templates/$template_name.
  *
  * @param   string $template_name          Template to load.
- * @param   string $string $template_path  Path to templates.
+ * @param   string $template_path          Path to templates.
  * @param   string $default_path           Default path to template files.
  * @return  string  Path to the template file.
  */
