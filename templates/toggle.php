@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Create the toggle for advising pages
+ * Create the toggle to click between the Advising and Careers page
  */
 function uri_careers_toggle( $link_careers, $link_advising, $button_style ) {
 	if ( function_exists( 'uri_cl_shortcode_button' ) ) {
