@@ -37,7 +37,7 @@ function uri_careers_render_jobs( $field ) {
  */
 function uri_careers_skills_list( $name_field ) {
 	$i_array = get_field( $name_field );
-	$t_array = str_getcsv( $i_array, ',' );
+	$t_array = str_getcsv( $i_array, ';' );
 	// var_dump( $t_array );
 	$listlength = count( $t_array );
 	global $output;
@@ -154,7 +154,7 @@ function uri_careers_render_skills() {
 	</ul>
 	</div>
 	</div>
-	<h3> $major specific competencies:</h3>
+	<h3 id="major_specific_head"> $major specific competencies:</h3>
 	<ul>
 	{$uri_careers_skills_list('skills')}
 	</ul>
