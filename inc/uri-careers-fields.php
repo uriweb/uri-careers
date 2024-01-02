@@ -348,6 +348,8 @@ if ( function_exists( 'register_field_group' ) ) {
 					'prepend' => '',
 					'append' => '',
 				),
+				/*
+				 Disable featured story field
 				array(
 					'key' => 'field_64e4fae53b0a2',
 					'label' => 'Featured Story',
@@ -368,6 +370,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					'prepend' => '',
 					'append' => '',
 				),
+				*/
 			),
 			'location' => array(
 				array(
