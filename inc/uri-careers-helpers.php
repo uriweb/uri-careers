@@ -97,7 +97,7 @@ function uri_careers_render_alumni_data() {
 function uri_careers_table_template( $entry, $experienced ) {
 	$uri_careers_render_jobs = 'uri_careers_render_jobs';
 	$tabledata = <<<table
-					<h3>Entry Level</h3>
+					<h3 class="job-level">Entry Level</h3>
 						<figure class="wp-block-table">
 						<table style="width: 60%;">
 						<thead>
@@ -109,7 +109,7 @@ function uri_careers_table_template( $entry, $experienced ) {
 								{$uri_careers_render_jobs($entry)}
 					</table>
 					</figure>
-		<h3>Experienced</h3>
+		<h3 class="job-level">Experienced</h3>
 		<figure class="wp-block-table">
 					<table style="width:60%;">
 					<thead>
@@ -168,8 +168,8 @@ function uri_careers_render_skills() {
  * Build the cards
  */
 function uri_careers_render_cards() {
-	$card_1 = '[cl-card title="Center for Career & Experiential Education" body="" img="http://d4.local/wp-content/uploads/2023/10/Screenshot-2023-10-17-at-2.12.50 PM.png" link="https://web.uri.edu/career/" button="Learn More"]';
-	$card_2 = '[cl-card title="Academic Enhancement Center" body="" img="http://d4.local/wp-content/uploads/2023/10/Screenshot-2023-10-17-at-2.12.50 PM.png" link="https://web.uri.edu/aec/" button="Learn More"]';
+	$card_1 = '[cl-card title="Center for Career & Experiential Education" body="" img="https://web.uri.edu/career/wp-content/uploads/sites/1069/05-students.jpg" link="https://web.uri.edu/career/"]';
+	$card_2 = '[cl-card title="Academic Enhancement Center" body="" img="https://web.uri.edu/aec/wp-content/uploads/sites/1063/AEC-logo.png" link="https://web.uri.edu/aec/"]';
 
 	$card = <<<cards_content
 	<div class="three-cards">

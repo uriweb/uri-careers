@@ -28,7 +28,7 @@ get_header();
 						if ( get_field( 'industry_a_entry_jobs' ) || get_field( 'industry_a_experienced_jobs ' ) ) {
 							$industry_a_jobs = uri_careers_table_template( 'industry_a_entry_jobs', 'industry_a_experienced_jobs' );
 						}
-						$build_shortcode = '[cl-tab]<h2>' . $industry_a . '</h2>' . $industry_a_jobs . '[/cl-tab]';
+						$build_shortcode = '[cl-tab]<h2 class="career-name">' . $industry_a . '</h2>' . $industry_a_jobs . '[/cl-tab]';
 					}
 					if ( get_field( 'industry_b_name' ) ) {
 						$industry_b = get_field( 'industry_b_name' );
@@ -36,7 +36,7 @@ get_header();
 						if ( get_field( 'industry_b_entry_jobs' ) || get_field( 'industry_b_experienced_jobs ' ) ) {
 							$industry_b_jobs = uri_careers_table_template( 'industry_b_entry_jobs', 'industry_b_experienced_jobs' );
 						}
-						$build_shortcode .= '[cl-tab]<h2>' . $industry_b . '</h2>' . $industry_b_jobs . '[/cl-tab]';
+						$build_shortcode .= '[cl-tab]<h2 class="career-name">' . $industry_b . '</h2>' . $industry_b_jobs . '[/cl-tab]';
 					}
 					if ( get_field( 'industry_c_name' ) ) {
 						$industry_c = get_field( 'industry_c_name' );
@@ -44,7 +44,7 @@ get_header();
 						if ( get_field( 'industry_c_entry_jobs' ) || get_field( 'industry_c_experienced_jobs ' ) ) {
 							$industry_c_jobs = uri_careers_table_template( 'industry_c_entry_jobs', 'industry_c_experienced_jobs' );
 						}
-						$build_shortcode .= '[cl-tab]<h2>' . $industry_c . '</h2>' . $industry_c_jobs . '[/cl-tab]';
+						$build_shortcode .= '[cl-tab]<h2 class="career-name">' . $industry_c . '</h2>' . $industry_c_jobs . '[/cl-tab]';
 					}
 					echo do_shortcode( '[cl-tabs]' . $build_shortcode . '[/cl-tabs]' );
 				}

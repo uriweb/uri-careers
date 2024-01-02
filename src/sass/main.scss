@@ -6,18 +6,19 @@
   margin: auto;
   width: 40%;
   display: flex;
+  padding-top: 2rem;
 }
 
 .jobs {
-  padding-top: 20%;
+  padding-top: 5rem;
   padding-bottom: 2.5rem;
   font-size: 2.0rem;
 }
 
 .three-cards {
   position: relative !important;
-  display: block;
-  padding-bottom: 10%;
+  //display: block;
+  padding-bottom: 6rem;
 }
 
 .grey-out {
@@ -30,11 +31,12 @@
 }
 
 .skills-list {
-  margin-top:15%;
+  margin-top:4rem;
   background-color: white;
-  padding: 10%;
+  padding: 3rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
-  margin-bottom: 15%;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
 }
 
 .story {
@@ -43,23 +45,33 @@
 
 .pipelist {
   line-height: 40px;
-  margin-bottom: 10%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .skills-columns {
-  padding: 3%;
+  padding: 2rem;
 }
 
 .bigger-header {
   font-size: 2.0rem;
+  padding-bottom: 2rem;
 }
 
 .career-data {
-  padding-bottom:10%;
+  padding-bottom:2rem;
 }
 
 #major_specific_head {
-  padding-top: 20px;
+  padding-top: 2rem;
+}
+
+.career-name {
+  padding-bottom: 1rem;
+}
+
+.job-level {
+  padding-top: 1rem;
 }
 
 
