@@ -65,7 +65,7 @@ function uri_careers_render_alumni_data() {
 	 $uri_employers = uri_careers_pipelist( 'employers' );
 	$uri_grad_schools = uri_careers_pipelist( 'grad_schools' );
 	$alumni_data = <<<head
-	<h2 class="bigger-header">Alumni Data</h2>
+	<h2 class="bigger-header">More Alumni Data</h2>
 	head;
 
 	$alumni_employers = <<<employers
@@ -99,7 +99,7 @@ function uri_careers_table_template( $entry, $experienced ) {
 	$tabledata = <<<table
 					<h3 class="job-level">Entry Level</h3>
 						<figure class="wp-block-table">
-						<table style="width: 60%;">
+						<table style="width:80%">
 						<thead>
 							<tr>
 								<th>Job Title</th>
@@ -111,7 +111,7 @@ function uri_careers_table_template( $entry, $experienced ) {
 					</figure>
 		<h3 class="job-level">Experienced</h3>
 		<figure class="wp-block-table">
-					<table style="width:60%;">
+					<table style="width:80%">
 					<thead>
 							<tr>
 								<th>Job Title</th>
@@ -136,6 +136,7 @@ function uri_careers_render_skills() {
 	$skills = <<<content
 	<div class="skills-columns">
 	<h3>General competencies:</h3>
+	<p>Despite the major, employers want to hire recent graduates who have developed general competencies to be successful in the workforce including:</p>
 			<div class="wp-block-columns">
 		<div class="wp-block-column">	
 	<ul>
@@ -155,9 +156,10 @@ function uri_careers_render_skills() {
 	</div>
 	</div>
 	<h3 id="major_specific_head"> $major specific competencies:</h3>
-	<ul>
+	<p>These specific skills are recommended and ranked by URI alumni with this major. Ask your academic advisor which courses lead to developing these proficiencies.</p>
+	<ol>
 	{$uri_careers_skills_list('skills')}
-	</ul>
+	</ol>
 	</div>
 	content;
 
@@ -168,8 +170,8 @@ function uri_careers_render_skills() {
  * Build the cards
  */
 function uri_careers_render_cards() {
-	$card_1 = '[cl-card title="Center for Career & Experiential Education" body="" img="https://web.uri.edu/career/wp-content/uploads/sites/1069/05-students.jpg" link="https://web.uri.edu/career/"]';
-	$card_2 = '[cl-card title="Academic Enhancement Center" body="" img="https://web.uri.edu/aec/wp-content/uploads/sites/1063/AEC-logo.png" link="https://web.uri.edu/aec/"]';
+	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="The CCEE provides students with career resources, oppurtunities, and tools, from internships and work-study to resume and interview guidance." img="http://d4.local/wp-content/uploads/2024/01/career-center.png" link="https://web.uri.edu/career/"]';
+	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs, including the Writing Center, study workshops, and more, to help students develop skills and strategies that lead to academic success." img="http://d4.local/wp-content/uploads/2024/01/AEC_logo.png" link="https://web.uri.edu/aec/"]';
 
 	$card = <<<cards_content
 	<div class="three-cards">
