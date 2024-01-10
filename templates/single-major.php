@@ -19,7 +19,7 @@ get_header();
 			<div class="career-data">
 
 				<h2 class="jobs">Top Careers for URI Graduates in <?php the_title(); ?> </h2>
-				<p>What can you do with this major? We gathered data from our past graduates and found that most URI alumni with this major go on to work in these leading industries: </p>
+				<p>What can you do with this major? We gathered data from our past graduates and found that most URI alumni with this major go on to work in these industries: </p>
 
 				<?php
 				if ( function_exists( 'uri_cl_shortcode_tabs' ) ) {

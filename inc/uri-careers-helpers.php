@@ -65,18 +65,17 @@ function uri_careers_render_alumni_data() {
 	 $uri_employers = uri_careers_pipelist( 'employers' );
 	$uri_grad_schools = uri_careers_pipelist( 'grad_schools' );
 	$alumni_data = <<<head
-	<h2 class="bigger-header">More Alumni Data</h2>
 	head;
 
 	$alumni_employers = <<<employers
-								<h3>Employers Hiring Our Grads</h3>
+								<h2>Employers Hiring Our Grads</h2>
 							<div class="pipelist">
 							{$uri_employers}
 							</div>
 							employers;
 
 		$alumni_grad_school = <<<g_school
-							<h3>Graduate Schools Enrolling Our Students</h3>
+							<h2>Graduate Schools Enrolling Our Students</h2>
 							<div class="pipelist">
 							{$uri_grad_schools}
 							</div>
@@ -135,8 +134,7 @@ function uri_careers_render_skills() {
 
 	$skills = <<<content
 	<div class="skills-columns">
-	<h3>General competencies:</h3>
-	<p>Despite the major, employers want to hire recent graduates who have developed general competencies to be successful in the workforce including:</p>
+	<p>Employers want to hire recent graduates who have developed general competencies to be successful in the workforce including:</p>
 			<div class="wp-block-columns">
 		<div class="wp-block-column">	
 	<ul>
@@ -155,7 +153,7 @@ function uri_careers_render_skills() {
 	</ul>
 	</div>
 	</div>
-	<h3 id="major_specific_head"> $major specific competencies:</h3>
+	<h2 id="major_specific_head"> $major specific competencies:</h2>
 	<p>These specific skills are recommended and ranked by URI alumni with this major. Ask your academic advisor which courses lead to developing these proficiencies.</p>
 	<ol>
 	{$uri_careers_skills_list('skills')}
@@ -170,17 +168,17 @@ function uri_careers_render_skills() {
  * Build the cards
  */
 function uri_careers_render_cards() {
-	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="The CCEE provides students with career resources, oppurtunities, and tools, from internships and work-study to resume and interview guidance." img="http://d4.local/wp-content/uploads/2024/01/career-center.png" link="https://web.uri.edu/career/"]';
-	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs, including the Writing Center, study workshops, and more, to help students develop skills and strategies that lead to academic success." img="http://d4.local/wp-content/uploads/2024/01/AEC_logo.png" link="https://web.uri.edu/aec/"]';
+	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="The CCEE provides students with career resources and oppurtunities, from internships to resume guidance." img="http://d4.local/wp-content/uploads/2024/01/career-center.png" link="https://web.uri.edu/career/"]';
+	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs, including the Writing Center, study workshops, and tutoring." img="http://d4.local/wp-content/uploads/2024/01/AEC_logo.png" link="https://web.uri.edu/aec/"]';
 
 	$card = <<<cards_content
 	<div class="three-cards">
 	<div class="wp-block-columns">
 								<div class="wp-block-column">
-								{$card_1}
+								{$card_2}
 </div>
 <div class="wp-block-column">
-{$card_2}
+{$card_1}
 </div>
 </div>
 </div>
