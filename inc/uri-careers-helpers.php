@@ -65,17 +65,20 @@ function uri_careers_render_alumni_data() {
 	 $uri_employers = uri_careers_pipelist( 'employers' );
 	$uri_grad_schools = uri_careers_pipelist( 'grad_schools' );
 	$alumni_data = <<<head
+	<h2 class="bigger-header">Where in the World are Rhody Graduates?</h2>
+							<p>There are Rhody Graduates across the globe. Check out the exciting sampling of where our graduates continue learning and working.</p>
 	head;
 
 	$alumni_employers = <<<employers
-								<h2>Employers Hiring Our Grads</h2>
+							
+								<h3>Employers Hiring Our Grads</h3>
 							<div class="pipelist">
 							{$uri_employers}
 							</div>
 							employers;
 
 		$alumni_grad_school = <<<g_school
-							<h2>Graduate Schools Enrolling Our Students</h2>
+							<h3>Graduate Schools Enrolling Our Students</h3>
 							<div class="pipelist">
 							{$uri_grad_schools}
 							</div>
@@ -108,7 +111,7 @@ function uri_careers_table_template( $entry, $experienced ) {
 								{$uri_careers_render_jobs($entry)}
 					</table>
 					</figure>
-		<h3 class="job-level">Experienced</h3>
+		<h3 class="job-level">Experienced (10 years or more in the industry)</h3>
 		<figure class="wp-block-table">
 					<table style="width:80%">
 					<thead>
@@ -134,9 +137,12 @@ function uri_careers_render_skills() {
 
 	$skills = <<<content
 	<div class="skills-columns">
-	<p>Employers want to hire recent graduates who have developed general competencies to be successful in the workforce including:</p>
-			<div class="wp-block-columns">
+	<p>Regardless of the major, employers want to hire recent grads who have developed career readiness competencies to be successful in the workforce. Ask your academic advisor which courses to enroll in that help develop  these essential competencies and ask your career education specialist (CES) for guidance including adding these keywords on your resume. In addition to those skills, the major specific skills are recommended by URI alumni.</p>
+	<p>Regardless of the major, employers want to hire recent graduates who have developed career readiness competencies to be successful in the workforce. Ask your academic advisor which courses can lead to developing these skills. Your Career Readiness Specialist (CES) can help you add these keywords to your resume.</p>
+	<h2>Career Readiness competencies:</h2>		
+	<div class="wp-block-columns">
 		<div class="wp-block-column">	
+		
 	<ul>
 		<li>Critical thinking</li>
 		<li>Communication</li>
@@ -154,7 +160,7 @@ function uri_careers_render_skills() {
 	</div>
 	</div>
 	<h2 id="major_specific_head"> $major specific competencies:</h2>
-	<p>These specific skills are recommended and ranked by URI alumni with this major. Ask your academic advisor which courses lead to developing these proficiencies.</p>
+	<p>These specific skills are recommended and ranked by URI alumni with this major.</p>
 	<ol>
 	{$uri_careers_skills_list('skills')}
 	</ol>
@@ -168,8 +174,8 @@ function uri_careers_render_skills() {
  * Build the cards
  */
 function uri_careers_render_cards() {
-	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="The CCEE provides students with career resources and oppurtunities, from internships to resume guidance." img="http://d4.local/wp-content/uploads/2024/01/career-center.png" link="https://web.uri.edu/career/"]';
-	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs, including the Writing Center, study workshops, and tutoring." img="http://d4.local/wp-content/uploads/2024/01/AEC_logo.png" link="https://web.uri.edu/aec/"]';
+	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="The CCEE provides students with career resources and oppurtunities, from internships to resume guidance." img="http://d4.local/wp-content/uploads/2024/01/careers.jpg" link="https://web.uri.edu/career/"]';
+	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs, including the Writing Center, study workshops, and tutoring." img="http://d4.local/wp-content/uploads/2024/01/AEC.jpg" link="https://web.uri.edu/aec/"]';
 
 	$card = <<<cards_content
 	<div class="three-cards">
