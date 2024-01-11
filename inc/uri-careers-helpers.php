@@ -142,7 +142,7 @@ function uri_careers_render_skills() {
 	<div class="skills-columns">
 	<p>Regardless of the major, employers want to hire recent grads who have developed career readiness competencies to be successful in the workforce. Ask your academic advisor which courses to enroll in that help develop  these essential competencies and ask your career education specialist (CES) for guidance including adding these keywords on your resume. In addition to those skills, the major specific skills are recommended by URI alumni.</p>
 	<p>Across all majors, employers want to hire recent graduates who have developed career readiness competencies to be successful in the workforce. Ask your academic advisor which courses can lead to developing these skills. Your Career Readiness Specialist (CES) can help you add these keywords to your resume.</p>
-	<h3>Career Readiness Competencies:</h3>		
+	<h3>Career Readiness for All Majors:</h3>		
 	<div class="wp-block-columns">
 		<div class="wp-block-column">	
 		
@@ -178,7 +178,7 @@ function uri_careers_render_skills() {
  */
 function uri_careers_render_cards() {
 	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="The CCEE provides students with career resources and oppurtunities, from internships to resume guidance." img="http://d4.local/wp-content/uploads/2024/01/careers.jpg" link="https://web.uri.edu/career/"]';
-	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs, including the Writing Center, study workshops, and tutoring." img="http://d4.local/wp-content/uploads/2024/01/AEC.jpg" link="https://web.uri.edu/aec/"]';
+	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs including the Writing Center, study workshops, and tutoring." img="http://d4.local/wp-content/uploads/2024/01/AEC.jpg" link="https://web.uri.edu/aec/"]';
 
 	$card = <<<cards_content
 	<div class="three-cards">
