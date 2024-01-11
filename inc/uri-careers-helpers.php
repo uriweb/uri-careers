@@ -22,9 +22,18 @@ function uri_careers_render_jobs( $field ) {
 			$sal_range = explode( '-', $value );
 
 			foreach ( $sal_range as $sal ) {
+				if(substr($sal, -1)== '+'){
+					var_dump('yes');
+					$sal_trim = rtrim($sal, '+');
+					$sal1 = "$ $sal_trim,000 +";
+					array_push( $salary_array, $sal1 );
+					$sal_range2 = implode( '  -  ', $salary_array );
+				}
+				else {
 				$sal1 = "$ $sal,000";
 				array_push( $salary_array, $sal1 );
 				$sal_range2 = implode( '  -  ', $salary_array );
+			}
 			}
 			$output2 = "<tr><td> $key </td><td> $sal_range2 </td></tr>";
 		}
