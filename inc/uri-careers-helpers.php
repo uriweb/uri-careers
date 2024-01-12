@@ -22,18 +22,16 @@ function uri_careers_render_jobs( $field ) {
 			$sal_range = explode( '-', $value );
 
 			foreach ( $sal_range as $sal ) {
-				if(substr($sal, -1)== '+'){
-					var_dump('yes');
-					$sal_trim = rtrim($sal, '+');
+				if ( substr( $sal, -1 ) == '+' ) {
+					$sal_trim = rtrim( $sal, '+' );
 					$sal1 = "$ $sal_trim,000 +";
 					array_push( $salary_array, $sal1 );
 					$sal_range2 = implode( '  -  ', $salary_array );
+				} else {
+					$sal1 = "$ $sal,000";
+					array_push( $salary_array, $sal1 );
+					$sal_range2 = implode( '  -  ', $salary_array );
 				}
-				else {
-				$sal1 = "$ $sal,000";
-				array_push( $salary_array, $sal1 );
-				$sal_range2 = implode( '  -  ', $salary_array );
-			}
 			}
 			$output2 = "<tr><td> $key </td><td> $sal_range2 </td></tr>";
 		}
@@ -84,24 +82,24 @@ function uri_careers_render_alumni_data() {
 							
 								<h3>Top Employers Hiring Our Grads</h3>
 							<div class="pipelist">
-							{$uri_employers}
+							<p>{$uri_employers}</p>
 							</div>
 							employers;
 
 		$alumni_grad_school = <<<g_school
 							<h3>Top Graduate Schools Enrolling Our Students</h3>
 							<div class="pipelist">
-							{$uri_grad_schools}
+							<p>{$uri_grad_schools}</p>
 							</div>
 							g_school;
 		$output = $alumni_data;
-		if ( get_field( 'grad_schools' ) ) {
-			$output .= $alumni_grad_school;
-		}
+	if ( get_field( 'grad_schools' ) ) {
+		$output .= $alumni_grad_school;
+	}
 	if ( get_field( 'employers' ) ) {
 			$output .= $alumni_employers;
 	}
-	
+
 	return $output;
 }
 
