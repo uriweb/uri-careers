@@ -4,7 +4,7 @@
 
 .center {
   margin: auto;
-  width: 40%;
+  width: 45%;
   display: flex;
   padding-top: 2rem;
 }
@@ -30,13 +30,15 @@
   background: #eee;
 }
 
+/*
 .skills-list {
   margin-top:4rem;
   background-color: white;
   padding: 3rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 4rem;
 }
+*/
 
 .story {
   margin-top:15%;
@@ -55,7 +57,6 @@
 
 .bigger-header {
   font-size: 2.0rem;
-  padding-bottom: 2rem;
 }
 
 .career-data {
@@ -77,4 +78,56 @@
 p {
   max-width: 1200px !important;
 }
+
+.alumni-card {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+/*
+.alumni-card h3 {
+  background-color: #002147;
+  color: white;
+  padding: 1.5rem;
+}
+*/
+
+/*option1 
+.off {
+  //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  ///color: #002147 !important;
+  color: white !important;
+  font-weight: 700 !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
+background: #002147 !important;
+}
+
+/*.on {
+  background: rgb(248, 248, 249)!important;
+  color: rgba(0,0,0,.9) !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+}
+*/
+
+
+
+/*option 2 
+.off {
+  background: white !important;
+  font-weight: 900 !important;
+  color: #005eff !important;
+  border: .5px solid #00214791 !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
+  //box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+}
+
+.on {
+  //box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px !important;
+}
+*/
 
