@@ -30,14 +30,16 @@ function uri_careers_toggle_shortcode( $attributes ) {
 	if ( null !== $attributes['advising_link'] && null === $attributes['careers_link'] ) {
 		$link_careers = get_permalink();
 		$link_advising = $attributes['advising_link'];
-		$button_style = array( 'prominent', 'disabled' );
+		$button_style = array( '', 'prominent' );
+		$style_class = array( 'on', 'off' );
 	}
 	if ( null !== $attributes['careers_link'] && null === $attributes['advising_link'] ) {
 		$link_careers = $attributes['careers_link'];
 		$link_advising = get_permalink();
-		$button_style = array( 'disabled', 'prominent' );
+		$button_style = array( 'prominent', '' );
+		$style_class = array( 'off', 'on' );
 	}
-	return uri_careers_toggle( $link_careers, $link_advising, $button_style );
+	return uri_careers_toggle( $link_careers, $link_advising, $button_style, $style_class );
 
 }
 
