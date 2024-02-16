@@ -9,18 +9,41 @@ get_header();
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<div class="toggle">
 		<?php
 		if ( get_field( 'careers_advising_link' ) ) {
 			$advising = get_field( 'careers_advising_link' );
 		}
 				echo do_shortcode( '[uri-careers-toggle advising_link="' . $advising . '"]' );
 		?>
+		</div>
+
+		<div class="banner-area">
+			<div class="banner-background">
+			<div class="banner-text">
+				<h2>Connect With Your Career Advisor</h2>
+			<p class="banner-p">At the <a href="https://web.uri.edu/career/">Center for Career and Experiential Education (CCEE)</a>, your career education specialist can introduce you to career paths and offer strategies to achieve your goals. To make an appointment, <a href="https://web.uri.edu/starfish/resources-for-students/">login to Starfish</a>.</p>
+		
+			<?php
+			if ( function_exists( 'uri_cl_shortcode_button' ) && get_field( 'advisor_page' ) ) {
+				$advisor_page = get_field( 'advisor_page' );
+
+
+					echo do_shortcode( '[cl-button link="' . $advisor_page . '" text="Meet your Career Education Specialist"]' );
+
+			}
+			?>
+			<div class="banner-heading">
+			<!--<h2><a href="<?php get_field( 'advisor_page' ); ?>">Meet Your Career Education Specialist</a></h2>-->
+		</div>
+			
+		</div>
+		</div>
 
 			<div class="career-data">
 
-				<!--<h2 class="jobs">Top Careers for URI Graduates in  </h2> -->
 				<h2 class="jobs">What Can You Do With This Major?</h2>
-				<p>We gathered data from our past graduates and found that most URI alumni with this major go on to work in these industries. </p>
+				<p>We gathered data from our past graduates and found that most URI alumni who majored in <?php the_title(); ?> go on to work in these industries among others. </p>
 
 				<?php
 				if ( function_exists( 'uri_cl_shortcode_tabs' ) ) {
@@ -91,13 +114,21 @@ get_header();
 			}
 			?>
 
-			<?php
-			if ( function_exists( 'uri_cl_shortcode_card' ) && function_exists( 'uri_cl_shortcode_breakout' ) ) {
-				$cards = uri_careers_render_cards();
-				echo do_shortcode( '[cl-breakout]' . $cards . '[/cl-breakout]' );
-			}
-			?>
-	</article>
-</main>
+			<div class="banner-area">
+				<div class="banner-background">
+					<div class="banner-text">
+						<h2>Connect With LinkedIn</h2>
+						<p>More than 100,000 URI students and alumni have a profile on LinkedIn, which is the largest professional networking platform online. To find URI alumni in your target field, use the Alumni Finder.</p>
+					<?php
+					if ( function_exists( 'uri_cl_shortcode_button' ) ) {
+						echo do_shortcode( '[cl-button link="https://www.linkedin.com/" text="Join LinkedIn"]' );
+					}
+					?>
+					</div>
+				</div>
+			</div>
 
-<?php get_footer(); ?>
+			</article>
+			</main>
+
+			<?php get_footer(); ?>
