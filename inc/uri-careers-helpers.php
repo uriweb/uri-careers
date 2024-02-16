@@ -61,7 +61,7 @@ function uri_careers_skills_list( $name_field ) {
 function uri_careers_pipelist( $name_field ) {
 	$i_array = get_field( $name_field );
 	$t_array = str_getcsv( $i_array, ';' );
-	$output = implode( '&nbsp; | &nbsp;', $t_array );
+	$output = implode( '&nbsp; &nbsp; | &nbsp; &nbsp;', $t_array );
 	return $output;
 }
 
@@ -111,7 +111,7 @@ function uri_careers_render_alumni_data() {
 function uri_careers_table_template( $entry, $experienced ) {
 	$uri_careers_render_jobs = 'uri_careers_render_jobs';
 	$tabledata = <<<table
-					<h3 class="job-level">Entry Level</h3>
+					<h3 class="job-level">Entry Level - new to the industry</h3>
 						<figure class="wp-block-table">
 						<table style="width:80%">
 						<thead>
@@ -123,7 +123,7 @@ function uri_careers_table_template( $entry, $experienced ) {
 								{$uri_careers_render_jobs($entry)}
 					</table>
 					</figure>
-		<h3 class="job-level">Experienced (10 years or more in the industry)</h3>
+		<h3 class="job-level">Experienced - typically 10 years or more in the profession</h3>
 		<figure class="wp-block-table">
 					<table style="width:80%">
 					<thead>
