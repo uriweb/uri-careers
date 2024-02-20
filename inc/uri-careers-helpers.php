@@ -108,9 +108,9 @@ function uri_careers_render_alumni_data() {
 /**
  * Build the tables of data for top careers
  */
-function uri_careers_table_template( $entry, $experienced ) {
+function uri_careers_table_template_entry( $entry ) {
 	$uri_careers_render_jobs = 'uri_careers_render_jobs';
-	$tabledata = <<<table
+	$tabledata_entrylevel = <<<table_entry
 					<h3 class="job-level">Entry Level - new to the industry</h3>
 						<figure class="wp-block-table">
 						<table style="width:80%">
@@ -123,6 +123,14 @@ function uri_careers_table_template( $entry, $experienced ) {
 								{$uri_careers_render_jobs($entry)}
 					</table>
 					</figure>
+					table_entry;
+
+				return $tabledata_entrylevel;
+}
+
+function uri_careers_table_template_experienced( $experienced ) {
+	$uri_careers_render_jobs = 'uri_careers_render_jobs';
+		$tabledata_experiencedlevel = <<<table_experienced
 		<h3 class="job-level">Experienced - typically 10 years or more in the profession</h3>
 		<figure class="wp-block-table">
 					<table style="width:80%">
@@ -135,9 +143,9 @@ function uri_careers_table_template( $entry, $experienced ) {
 								{$uri_careers_render_jobs($experienced)}
 					</table>
 					</figure>
-		table;
+		table_experienced;
 
-	return $tabledata;
+	return $tabledata_experiencedlevel;
 }
 
 /**
@@ -172,6 +180,10 @@ function uri_careers_render_skills() {
 	</div>
 	</div>
 	</div>
+	content;
+
+	if ( get_field( 'skills' ) ) {
+		$skills .= <<<spec_content
 	<div class="alumni-card">
 	<h3 id="major_specific_head"> $major skills:</h3>
 	<p>These skills are recommended and ranked by URI alumni with this major.</p>
@@ -180,29 +192,9 @@ function uri_careers_render_skills() {
 	</ol>
 	</div>
 	</div>
-	content;
+	spec_content;
+	}
 
 	return $skills;
 }
 
-/**
- * Build the cards
- */
-function uri_careers_render_cards() {
-	$card_1 = '[cl-card title="Center for Career and Experiential Education" body="From internships to resume guidance, the CCEE provides students with career resources and oppurtunities." img="http://d4.local/wp-content/uploads/2024/01/careers.jpg" link="https://web.uri.edu/career/"]';
-	$card_2 = '[cl-card title="Academic Enhancement Center" body="The AEC operates peer-to-peer programs including the Writing Center, study workshops, and tutoring." img="http://d4.local/wp-content/uploads/2024/01/AEC.jpg" link="https://web.uri.edu/aec/"]';
-
-	$card = <<<cards_content
-	<div class="three-cards">
-	<div class="wp-block-columns">
-								<div class="wp-block-column">
-								{$card_2}
-</div>
-<div class="wp-block-column">
-{$card_1}
-</div>
-</div>
-</div>
-cards_content;
-	return $card;
-}
