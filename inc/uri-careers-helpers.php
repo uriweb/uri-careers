@@ -77,32 +77,28 @@ function uri_careers_render_alumni_data() {
 							<p>Many alumni who majored in $major go on to pursue advanced degrees or careers across the globe. </p>
 	head;
 
-	$alumni_employers = <<<employers
-							<div class="alumni-card">
-								<h3>Top Employers Hiring Our Grads</h3>
-							<div class="pipelist">
-							<p>{$uri_employers}</p>
-							</div>
-							</div>
-							employers;
-
-		$alumni_grad_school = <<<g_school
-							<div class="alumni-card">
-							<h3>Top Graduate Schools Enrolling Our Students</h3>
-							<div class="pipelist">
-							<p>{$uri_grad_schools}</p>
-							</div>
-							</div>
-							g_school;
-		$output = $alumni_data;
 	if ( get_field( 'grad_schools' ) ) {
-		$output .= $alumni_grad_school;
-	}
-	if ( get_field( 'employers' ) ) {
-			$output .= $alumni_employers;
+		$alumni_data .= <<<g_school
+		<div class="alumni-card">
+		<h3>Top Graduate Schools Enrolling Our Students</h3>
+		<div class="pipelist">
+		<p>{$uri_grad_schools}</p>
+		</div>
+		</div>
+		g_school;
 	}
 
-	return $output;
+	if ( get_field( 'employers' ) ) {
+		$alumni_data .= <<<employers
+			<div class="alumni-card">
+				<h3>Top Employers Hiring Our Grads</h3>
+			<div class="pipelist">
+			<p>{$uri_employers}</p>
+			</div>
+			</div>
+			employers;
+	}
+	return $alumni_data;
 }
 
 /**

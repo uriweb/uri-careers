@@ -13,8 +13,9 @@ get_header();
 				<?php
 				if ( get_field( 'careers_advising_link' ) ) {
 					$advising = get_field( 'careers_advising_link' );
+
+					echo do_shortcode( '[uri-careers-toggle advising_link="' . $advising . '"]' );
 				}
-				echo do_shortcode( '[uri-careers-toggle advising_link="' . $advising . '"]' );
 				?>
 			</div>
 
@@ -98,7 +99,6 @@ get_header();
 			}
 			?>
 
-			<?php // if ( get_field( 'skills' ) ) { ?>
 				<div class="skills-panel">
 					<div class="skills-list">
 						<h2 class="bigger-header" id="skills">What Do Employers Look for in a Candidate?</h2>
@@ -108,9 +108,6 @@ get_header();
 						?>
 					</div>
 				</div>
-				<?php
-				// }
-				?>
 
 			<?php
 			if ( function_exists( 'uri_cl_shortcode_breakout' ) ) {
