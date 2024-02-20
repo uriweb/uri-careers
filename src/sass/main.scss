@@ -1,7 +1,5 @@
 /* ======= STYLES ======= */
 
-
-
 .center {
   margin: auto;
   width: 45%;
@@ -10,12 +8,11 @@
 }
 
 .toggle {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .jobs {
   padding-top: 4rem;
-  //padding-bottom: 2.5rem;
   font-size: 2.0rem;
 }
 
@@ -26,10 +23,6 @@
   margin-left: -50vw;
   margin-bottom: 2rem;
   background: #eee;
-}
-
-.story {
-  margin-top:15%;
 }
 
 .pipelist {
@@ -45,6 +38,10 @@
 
 .bigger-header {
   font-size: 2.0rem;
+}
+
+#skills {
+  padding-top: 2rem;
 }
 
 .career-data {
@@ -67,25 +64,60 @@ p {
   background-color: white;
   box-shadow: 0px 7px 29px 0px #0021475f;
   padding: 1rem;
-  width: 80%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
   border: 2px solid #c0ddf2;
-}
 
-.alumni-card h3 {
+  h3 {
   padding-top: 2rem;
   padding-left: 2rem;
-}
+  }
 
-.alumni-card p{
+  p {
   padding-left: 2rem;
   padding-right: 2rem;
+  }
 }
 
-.banner-background{
-  display: block;
+.banner-text h2 {
+  color:#002147;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.banner-p {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.banner-button {
+  position: relative;
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.banner-button :after {
+display: block;
+position: absolute;
+top: 2px;
+right: -35px;
+content: "";
+width: 10px;
+height: 10px;
+background-image: url(https://www.uri.edu/wordpress/wp-content/themes/uri-modern/images/cl/icon-card-link.png);
+background-position: 0 -10px;
+background-repeat: no-repeat;
+background-size: 100% auto;
+border: 0;
+}
+
+.banner-background {
   width: 100vw;
   position: relative;
   left: 50%;
@@ -95,26 +127,22 @@ p {
   background-color: #c0ddf2;
   background-image: linear-gradient(70deg, #eeeeee, #c0ddf2 );
   box-shadow: 0px 7px 29px 0px #0021477b;
+
+  &.use-banner-width {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .banner-text {
+    margin: 0 auto;
+    padding: 0 25px;
+  }
 }
 
-.banner-text{
-  padding: 3rem 25px 3rem 10rem;
-  margin: 0 auto;
-  color: #002147;
-}
-
-.banner-text a.cl-button {
-  text-transform: none;
-  font-size: medium;
-  background-color: white;
-  color: #002147;
-  max-width: 400px;
-}
-
-.banner-text h2 {
-  color:#002147;
-}
-
-.banner-p {
-  margin-top:2rem;
+@media all and (min-width: 1050px) {
+  .banner-text {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
