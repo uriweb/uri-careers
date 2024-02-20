@@ -9,36 +9,34 @@ get_header();
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<div class="toggle">
-		<?php
-		if ( get_field( 'careers_advising_link' ) ) {
-			$advising = get_field( 'careers_advising_link' );
-		}
+			<div class="toggle">
+				<?php
+				if ( get_field( 'careers_advising_link' ) ) {
+					$advising = get_field( 'careers_advising_link' );
+				}
 				echo do_shortcode( '[uri-careers-toggle advising_link="' . $advising . '"]' );
-		?>
-		</div>
+				?>
+			</div>
 
-		<div class="banner-area">
-			<div class="banner-background">
-			<div class="banner-text">
-				<h2>Connect With Your Career Advisor</h2>
-			<p class="banner-p">At the <a href="https://web.uri.edu/career/">Center for Career and Experiential Education (CCEE)</a>, your career education specialist can introduce you to career paths and offer strategies to achieve your goals. To make an appointment, <a href="https://web.uri.edu/starfish/resources-for-students/">login to Starfish</a>.</p>
-		
-			<?php
-			if ( function_exists( 'uri_cl_shortcode_button' ) && get_field( 'advisor_page' ) ) {
-				$advisor_page = get_field( 'advisor_page' );
+			<div class="banner-area">
+				<div class="banner-background use-banner-width">
+					<div class="banner-text">
+						<h2>Connect With Your Career Advisor</h2>
+						<p class="banner-p">At the <a href="https://web.uri.edu/career/">Center for Career and Experiential Education (CCEE)</a>, your Career Education Specialist can introduce you to career paths and offer strategies to achieve your goals. To make an appointment, <a href="https://web.uri.edu/starfish/resources-for-students/">login to Starfish</a>.</p>
 
+						<?php
+						if ( get_field( 'advisor_page' ) ) {
+							?>
+							<span class="banner-button">
+								<a href="<?php $advisor_page; ?>">MEET YOUR CAREER EDUCATION SPECIALIST</a>
+							</span>
+							<?php
+						}
+						?>
 
-					echo do_shortcode( '[cl-button link="' . $advisor_page . '" text="Meet your Career Education Specialist"]' );
-
-			}
-			?>
-			<div class="banner-heading">
-			<!--<h2><a href="<?php get_field( 'advisor_page' ); ?>">Meet Your Career Education Specialist</a></h2>-->
-		</div>
-			
-		</div>
-		</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="career-data">
 
@@ -76,7 +74,6 @@ get_header();
 				?>
 			</div>
 
-
 			<?php
 			if ( get_field( 'employers' ) || ( get_field( 'grad_schools' ) ) ) {
 				if ( function_exists( 'uri_cl_shortcode_breakout' ) ) {
@@ -86,11 +83,10 @@ get_header();
 			}
 			?>
 
-
 			<?php if ( get_field( 'skills' ) ) { ?>
 				<div class="skills-panel">
 					<div class="skills-list">
-						<h2 class="bigger-header">What Do Employers Look for in a Candidate?</h2>
+						<h2 class="bigger-header" id="skills">What Do Employers Look for in a Candidate?</h2>
 						<?php
 						$all_skills = uri_careers_render_skills();
 						echo $all_skills;
@@ -100,9 +96,6 @@ get_header();
 				<?php
 			}
 			?>
-
-
-
 
 			<?php
 			if ( function_exists( 'uri_cl_shortcode_breakout' ) ) {
@@ -115,20 +108,17 @@ get_header();
 			?>
 
 			<div class="banner-area">
-				<div class="banner-background">
+				<div class="banner-background use-banner-width">
 					<div class="banner-text">
 						<h2>Connect With LinkedIn</h2>
-						<p>More than 100,000 URI students and alumni have a profile on LinkedIn, which is the largest professional networking platform online. To find URI alumni in your target field, use the Alumni Finder.</p>
-					<?php
-					if ( function_exists( 'uri_cl_shortcode_button' ) ) {
-						echo do_shortcode( '[cl-button link="https://www.linkedin.com/" text="Join LinkedIn"]' );
-					}
-					?>
+						<p class="banner-p">More than 100,000 URI students and alumni have a profile on LinkedIn, which is the largest professional networking platform online. To find URI alumni in your target field, use the Alumni Finder.</p>
+						<span class="banner-button">
+							<a href="https://www.linkedin.com/">Join LinkedIn</a>
+						</span>
 					</div>
 				</div>
 			</div>
+	</article>
+</main>
 
-			</article>
-			</main>
-
-			<?php get_footer(); ?>
+<?php get_footer(); ?>
