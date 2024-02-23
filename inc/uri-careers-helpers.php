@@ -102,7 +102,7 @@ function uri_careers_render_alumni_data() {
 }
 
 /**
- * Build the tables of data for top careers
+ * Build the tables of data for top entry level careers
  */
 function uri_careers_table_template_entry( $entry ) {
 	$uri_careers_render_jobs = 'uri_careers_render_jobs';
@@ -124,6 +124,9 @@ function uri_careers_table_template_entry( $entry ) {
 				return $tabledata_entrylevel;
 }
 
+/**
+ * Build the tables of data for top experiences careers
+ */
 function uri_careers_table_template_experienced( $experienced ) {
 	$uri_careers_render_jobs = 'uri_careers_render_jobs';
 		$tabledata_experiencedlevel = <<<table_experienced
