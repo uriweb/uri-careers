@@ -1,7 +1,7 @@
 # URI Careers
 
 
-A plugin to display Major to Career data and information. 
+A tool to display URI alumni career data and information. 
 
 ## Theme Details
 
