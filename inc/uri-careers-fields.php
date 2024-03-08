@@ -93,11 +93,11 @@ if ( function_exists( 'register_field_group' ) ) {
 			'fields' => array(
 				array(
 					'key' => 'field_64dcf64afd993',
-					'label' => 'Advising Link',
+					'label' => 'Majors Link',
 					'name' => 'careers_advising_link',
 					'aria-label' => '',
 					'type' => 'text',
-					'instructions' => 'Link to Advising page',
+					'instructions' => 'Link to Majors page',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -107,6 +107,25 @@ if ( function_exists( 'register_field_group' ) ) {
 					),
 					'default_value' => '',
 					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_65ce19c20fb70',
+					'label' => 'Career Advisor Page',
+					'name' => 'advisor_page',
+					'type' => 'text',
+					'instructions' => 'Link to the Career Advisor page',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
 				),
 				array(
 					'key' => 'field_64dd06dcfd999',
@@ -348,35 +367,8 @@ if ( function_exists( 'register_field_group' ) ) {
 					'prepend' => '',
 					'append' => '',
 				),
-				array(
-					'key' => 'field_64e4fae53b0a2',
-					'label' => 'Featured Story',
-					'name' => 'featured_story',
-					'aria-label' => '',
-					'type' => 'wysiwyg',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'maxlength' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-				),
 			),
 			'location' => array(
-				array(
-					array(
-						'param' => 'post_type',
-						'operator' => '==',
-						'value' => 'post',
-					),
-				),
 				array(
 					array(
 						'param' => 'post_type',

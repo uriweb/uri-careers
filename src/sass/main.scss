@@ -1,41 +1,153 @@
 /* ======= STYLES ======= */
 
-
-
 .center {
   margin: auto;
-  width: 40%;
+  width: 45%;
   display: flex;
+  padding-top: 2rem;
+}
+
+.toggle {
+  margin-bottom: 4rem;
 }
 
 .jobs {
-  margin-top: 15%;
-  font-size: larger;
-}
-
-.three-cards {
-  position: relative !important;
-  margin-top:15%;
-}
-
-.alumni-data {
-  margin-top:15%;
-}
-
-.story {
-  margin-top:15%;
+  padding-top: 4rem;
+  font-size: 2.0rem;
 }
 
 .pipelist {
   line-height: 40px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.skills-panel {
-  margin-top: 15%;
-  margin-bottom: 15%;
+.skills-columns {
+  padding: 1rem;
+  font-size: 1.2rem;
 }
 
+.bigger-header {
+  font-size: 2.0rem;
+}
+
+#skills {
+  padding-top: 2rem;
+}
+
+.career-data {
+  padding-bottom: 2rem;
+}
+
+.career-name {
+  padding-bottom: 1rem;
+}
+
+.job-level {
+  padding-top: 1rem;
+}
+
+p {
+  max-width: 1200px !important;
+}
+
+.alumni-card {
+  background-color: white;
+  box-shadow: 0px 7px 29px 0px #0021475f;
+  padding: 1rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border: 2px solid #c0ddf2;
+
+  h3 {
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.banner-text h2 {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #002147;
+}
+
+.banner-p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #002147;
+}
+
+.banner-button {
+  position: relative;
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+
+  a{
+    color: #767676;
+  }
 
 
+  :after {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: -35px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(https://www.uri.edu/wordpress/wp-content/themes/uri-modern/images/cl/icon-card-link.png);
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border: 0;
+  }
 
+  :hover {
+    color: #005eff;
 
+    &:after {
+      background-position: 0 -10px;
+    }
+  }
+}
+
+.banner-background {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+  background-color: #c0ddf2;
+  background-image: linear-gradient(70deg, #eeeeee, #c0ddf2);
+  box-shadow: 0px 7px 29px 0px #0021477b;
+
+  &.use-banner-width {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .banner-text {
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+}
+
+@media all and (min-width: 1050px) {
+  .banner-text {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
