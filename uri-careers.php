@@ -3,7 +3,7 @@
  * Plugin Name: URI Careers
  * Plugin URI: http://www.uri.edu
  * Description: A plugin to display Major and Career data
- * Version: 0.1.0
+ * Version: 1.0.0
  * Author: URI Web Communications
  * Author URI: https://today.uri.edu/
  *
