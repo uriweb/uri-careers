@@ -94,7 +94,7 @@ if ( function_exists( 'register_field_group' ) ) {
 				array(
 					'key' => 'field_64dcf64afd993',
 					'label' => 'Majors Link',
-					'name' => 'careers_advising_link',
+					'name' => 'majors_link',
 					'aria-label' => '',
 					'type' => 'text',
 					'instructions' => 'Link to Majors page',
