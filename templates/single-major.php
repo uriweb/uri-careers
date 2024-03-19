@@ -11,10 +11,10 @@ get_header();
 
 			<div class="toggle">
 				<?php
-				if ( get_field( 'careers_advising_link' ) ) {
-					$advising = get_field( 'careers_advising_link' );
+				if ( get_field( 'majors_link' ) ) {
+					$majors_link = get_field( 'majors_link' );
 
-					echo do_shortcode( '[uri-careers-toggle advising_link="' . $advising . '"]' );
+					echo do_shortcode( '[uri-careers-toggle advising_link="' . $majors_link . '"]' );
 				}
 				?>
 			</div>
@@ -27,9 +27,12 @@ get_header();
 
 						<?php
 						if ( get_field( 'advisor_page' ) ) {
+							$meetadvisor = get_field( 'advisor_page' );
 							?>
 							<span class="banner-button">
-								<a href="<?php $advisor_page; ?>">MEET YOUR CAREER EDUCATION SPECIALIST</a>
+							<?php
+								echo '<a href="' . $meetadvisor . '">MEET YOUR CAREER EDUCATION SPECIALIST</a>'
+							?>
 							</span>
 							<?php
 						}
