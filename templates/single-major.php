@@ -12,9 +12,9 @@ get_header();
 			<div class="toggle">
 				<?php
 				if ( get_field( 'majors_link' ) ) {
-					$majors_link = get_field( 'majors_link' );
+					$majors_link_toggle = get_field( 'majors_link' );
 
-					echo do_shortcode( '[uri-careers-toggle advising_link="' . $majors_link . '"]' );
+					echo do_shortcode( '[uri-careers-toggle majors="' . $majors_link_toggle . '"]' );
 				}
 				?>
 			</div>
