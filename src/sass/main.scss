@@ -152,7 +152,7 @@ p {
   }
 }
 
-.breakout {
+.c-breakout {
 
   width: 100vw;
   position: relative;
@@ -161,12 +161,12 @@ p {
   margin-bottom: 2rem;
   background: #eee;
 
-  &.use-breakout-width {
+  &.use-c-breakout-width {
     padding-top: 4rem;
     padding-bottom: 2rem;
   }
 
-  .breakout-width {
+  .c-breakout-width {
     margin: 0 auto;
     padding: 0 25px;
   }
@@ -174,7 +174,7 @@ p {
 }
 
 @media all and (min-width: 1050px) {
-  .breakout-width {
+  .c-breakout-width {
     width: 1000px;
     margin: 0 auto;
     padding: 0;
