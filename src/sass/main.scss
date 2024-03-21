@@ -151,3 +151,32 @@ p {
     padding: 0;
   }
 }
+
+.breakout {
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-bottom: 2rem;
+  background: #eee;
+
+  &.use-breakout-width {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .breakout-width {
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+
+}
+
+@media all and (min-width: 1050px) {
+  .breakout-width {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
