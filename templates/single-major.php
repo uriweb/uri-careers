@@ -30,9 +30,9 @@ get_header();
 							$meetadvisor = get_field( 'advisor_page' );
 							?>
 							<span class="banner-button">
-							<?php
+								<?php
 								echo '<a href="' . $meetadvisor . '">MEET YOUR CAREER EDUCATION SPECIALIST</a>'
-							?>
+								?>
 							</span>
 							<?php
 						}
@@ -95,15 +95,15 @@ get_header();
 				<?php
 				if ( get_field( 'employers' ) || ( get_field( 'grad_schools' ) ) ) {
 
-						$alumni_content = uri_careers_render_alumni_data();
+					$alumni_content = uri_careers_render_alumni_data();
 					?>
-						<div class="breakout use-breakout-width">
-						<div class="breakout-width">
+					<div class="c-breakout use-c-breakout-width">
+						<div class="c-breakout-width">
 							<?php
 							echo $alumni_content;
 							?>
-				</div>
-				</div>
+						</div>
+					</div>
 					<?php
 				}
 			}
