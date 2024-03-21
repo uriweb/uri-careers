@@ -94,10 +94,17 @@ get_header();
 
 				<?php
 				if ( get_field( 'employers' ) || ( get_field( 'grad_schools' ) ) ) {
-					if ( function_exists( 'uri_cl_shortcode_breakout' ) ) {
+
 						$alumni_content = uri_careers_render_alumni_data();
-						echo do_shortcode( '[cl-breakout]' . $alumni_content . '[/cl-breakout]' );
-					}
+					?>
+						<div class="breakout use-breakout-width">
+						<div class="breakout-width">
+							<?php
+							echo $alumni_content;
+							?>
+				</div>
+				</div>
+					<?php
 				}
 			}
 			?>
