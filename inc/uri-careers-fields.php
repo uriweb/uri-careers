@@ -89,7 +89,7 @@ if ( function_exists( 'register_field_group' ) ) {
 	register_field_group(
 		array(
 			'key' => 'group_64dcf3d914d5d',
-			'title' => 'Major Fields',
+			'title' => 'Career Data Fields',
 			'fields' => array(
 				array(
 					'key' => 'field_64dcf64afd993',
@@ -152,7 +152,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					'name' => 'industry_a_name',
 					'aria-label' => '',
 					'type' => 'text',
-					'instructions' => 'Industry A Name',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -172,7 +172,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					'name' => 'industry_a_entry_jobs',
 					'aria-label' => '',
 					'type' => 'text',
-					'instructions' => 'Industry A Entry Level Job Title (a)',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -192,7 +192,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					'name' => 'industry_a_experienced_jobs',
 					'aria-label' => '',
 					'type' => 'text',
-					'instructions' => 'Industry A Experienced job title (a)',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
