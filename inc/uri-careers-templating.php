@@ -92,7 +92,7 @@ function uri_careers_locate_template( $template_name, $template_path = '', $defa
 	 */
 function uri_careers_template_loader( $template ) {
 
-	if ( is_single() && get_post_type() === 'majors' ) {
+	if ( is_single() && get_post_type() === 'careersbymajor' ) {
 
 		$file = 'single-major.php';
 
