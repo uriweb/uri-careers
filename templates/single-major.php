@@ -11,10 +11,10 @@ get_header();
 
 			<div class="toggle">
 				<?php
-				if ( get_field( 'majors_link' ) ) {
-					$majors_link_toggle = get_field( 'majors_link' );
+				if ( get_field( 'advising_major' ) ) {
+					$major_link_toggle = get_field( 'advising_major' );
 
-					echo do_shortcode( '[uri-careers-toggle majors="' . $majors_link_toggle . '"]' );
+					echo do_shortcode( '[uri-careers-toggle major="' . $major_link_toggle . '"]' );
 				}
 				?>
 			</div>
@@ -26,8 +26,8 @@ get_header();
 						<p class="banner-p">At the <a href="https://web.uri.edu/career/">Center for Career and Experiential Education (CCEE)</a>, your Career Education Specialist can introduce you to career paths and offer strategies to achieve your goals. To make an appointment, <a href="https://web.uri.edu/starfish/resources-for-students/">login to Starfish</a>.</p>
 
 						<?php
-						if ( get_field( 'advisor_page' ) ) {
-							$meetadvisor = get_field( 'advisor_page' );
+						if ( get_field( 'career_advisor' ) ) {
+							$meetadvisor = get_field( 'career_advisor' );
 							?>
 							<span class="banner-button">
 								<?php
