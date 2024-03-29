@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function uri_careers_create_program_post_type() {
 
 	register_post_type(
-		'careersbymajor',
+		'careers-by-major',
 	   array(
 		   'labels' => array(
 			   'name' => 'Career Data',
@@ -60,11 +60,11 @@ function uri_careers_create_program_post_type() {
 		   'delete_with_user' => false,
 	   )
 		);
-
+/*
 		register_taxonomy(
-			'careersbyajor',
+			'careersbymajor',
 			array(
-				0 => 'careers',
+				0 => 'careersbymajor',
 			),
 			array(
 				'hierarchical' => true,
@@ -73,10 +73,11 @@ function uri_careers_create_program_post_type() {
 				'show_ui' => true,
 				'show_in_rest' => true,
 				'query_var' => true,
-				'rewrite' => array( 'slug' => 'careers' ),
+				'rewrite' => array( 'slug' => 'careersbymajor' ),
 				'singular_label' => 'Career',
 			)
 		);
+		*/
 }
 add_action( 'init', 'uri_careers_create_program_post_type' );
 
@@ -392,7 +393,7 @@ if ( function_exists( 'register_field_group' ) ) {
 					array(
 						'param' => 'post_type',
 						'operator' => '==',
-						'value' => 'careersbymajor',
+						'value' => 'careers-by-major',
 					),
 				),
 			),
