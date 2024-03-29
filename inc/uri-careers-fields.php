@@ -60,24 +60,7 @@ function uri_careers_create_program_post_type() {
 		   'delete_with_user' => false,
 	   )
 		);
-/*
-		register_taxonomy(
-			'careersbymajor',
-			array(
-				0 => 'careersbymajor',
-			),
-			array(
-				'hierarchical' => true,
-				'label' => 'Major to Career',
-				'show_admin_column' => true,
-				'show_ui' => true,
-				'show_in_rest' => true,
-				'query_var' => true,
-				'rewrite' => array( 'slug' => 'careersbymajor' ),
-				'singular_label' => 'Career',
-			)
-		);
-		*/
+		
 }
 add_action( 'init', 'uri_careers_create_program_post_type' );
 
