@@ -15,32 +15,32 @@ function uri_careers_toggle_shortcode( $attributes, $shortcode ) {
 	// default attributes
 	$attributes = shortcode_atts(
 	  array(
-		  'majors' => null,
-		  'careers' => null,
+		  'major' => null,
+		  'career' => null,
 	  ),
 	 $attributes,
 		$shortcode
 	 );
 
-	if ( null === $attributes['majors'] && null === $attributes['careers'] ) {
-		$button_careers = get_permalink();
-		$button_majors = get_permalink();
+	if ( null === $attributes['major'] && null === $attributes['career'] ) {
+		$button_career = get_permalink();
+		$button_major = get_permalink();
 		$button_style = array( 'disabled', 'disabled' );
 	}
 
-	if ( null !== $attributes['majors'] && null === $attributes['careers'] ) {
-		$button_careers = get_permalink();
-		$button_majors = $attributes['majors'];
+	if ( null !== $attributes['major'] && null === $attributes['career'] ) {
+		$button_career = get_permalink();
+		$button_major = $attributes['major'];
 		$button_style = array( '', 'prominent' );
 		$style_class = array( 'on', 'off' );
 	}
-	if ( null !== $attributes['careers'] && null === $attributes['majors'] ) {
-		$button_careers = $attributes['careers'];
-		$button_majors = get_permalink();
+	if ( null !== $attributes['career'] && null === $attributes['major'] ) {
+		$button_career = $attributes['career'];
+		$button_major = get_permalink();
 		$button_style = array( 'prominent', '' );
 		$style_class = array( 'off', 'on' );
 	}
-	return uri_careers_toggle( $button_careers, $button_majors, $button_style, $style_class );
+	return uri_careers_toggle( $button_career, $button_major, $button_style, $style_class );
 
 }
 
