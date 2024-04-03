@@ -158,7 +158,7 @@ function uri_careers_render_skills() {
 	<div class="skills-columns">
 	<p>Across all majors, employers want to hire recent graduates who have the core skills that lead to a successful career. Ask your academic advisor which courses introduce or build upon these 8 Career Readiness competencies. After that, your Career Education Specialist (CES) can help you demonstrate these acquired skills and experiences in your resume.</p>
 	<div class="alumni-card">
-	<h3>Career Readiness for all majors:</h3>		
+	<h3>Career Readiness for All Majors:</h3>		
 	<div class="wp-block-columns">
 		<div class="wp-block-column">	
 		
@@ -184,7 +184,7 @@ function uri_careers_render_skills() {
 	if ( get_field( 'skills' ) ) {
 		$skills .= <<<spec_content
 	<div class="alumni-card">
-	<h3 id="major_specific_head"> $major skills:</h3>
+	<h3 id="major_specific_head"> $major Skills:</h3>
 	<p>These skills are recommended and ranked by URI alumni with this major.</p>
 	<ol>
 	{$uri_careers_skills_list('skills')}
