@@ -47,7 +47,7 @@
   padding-top: 1rem;
 }
 
-p {
+p.uri-careers-p {
   max-width: 1200px !important;
 }
 
@@ -82,20 +82,17 @@ p {
   margin-top: 2rem;
   font-size: 1rem;
   color: #002147;
+  max-width: 1200px;
 }
 
 .banner-button {
   position: relative;
   display: inline-block;
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .1rem;
   line-height: 1rem;
   text-transform: uppercase;
-
-  a{
-    color: #767676;
-  }
 
 
   :after {
@@ -107,17 +104,17 @@ p {
     width: 10px;
     height: 10px;
     background-image: url(https://www.uri.edu/wordpress/wp-content/themes/uri-modern/images/cl/icon-card-link.png);
-    background-position: 0 0px;
+    background-position: 0 -10px;
     background-repeat: no-repeat;
     background-size: 100% auto;
     border: 0;
   }
 
   :hover {
-    color: #005eff;
+    color: #002147;
 
     &:after {
-      background-position: 0 -10px;
+      background-position: 0 0px;
     }
   }
 }

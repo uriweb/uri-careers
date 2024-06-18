@@ -74,7 +74,7 @@ function uri_careers_render_alumni_data() {
 	$major = the_title( '', ' ', false );
 	$alumni_data = <<<head
 							<h2 class="bigger-header">Where Can You Find URI Graduates?</h2>
-							<p>Many alumni who majored in $major go on to pursue advanced degrees or careers across the globe. </p>
+							<p class="uri-careers-p">Many alumni who majored in $major go on to pursue advanced degrees or careers across the globe. </p>
 	head;
 
 	if ( get_field( 'grad_schools' ) ) {
@@ -82,7 +82,7 @@ function uri_careers_render_alumni_data() {
 		<div class="alumni-card">
 		<h3>Top Graduate Schools Enrolling Our Students</h3>
 		<div class="pipelist">
-		<p>{$uri_grad_schools}</p>
+		<p class="uri-careers-p">{$uri_grad_schools}</p>
 		</div>
 		</div>
 		g_school;
@@ -93,7 +93,7 @@ function uri_careers_render_alumni_data() {
 			<div class="alumni-card">
 				<h3>Top Employers Hiring Our Grads</h3>
 			<div class="pipelist">
-			<p>{$uri_employers}</p>
+			<p class="uri-careers-p">{$uri_employers}</p>
 			</div>
 			</div>
 			employers;
@@ -156,7 +156,7 @@ function uri_careers_render_skills() {
 
 	$skills = <<<content
 	<div class="skills-columns">
-	<p>Across all majors, employers want to hire recent graduates who have the core skills that lead to a successful career. Ask your academic advisor which courses introduce or build upon these 8 Career Readiness competencies. After that, your Career Education Specialist (CES) can help you demonstrate these acquired skills and experiences in your resume.</p>
+	<p class="uri-careers-p">Across all majors, employers want to hire recent graduates who have the core skills that lead to a successful career. Ask your academic advisor which courses introduce or build upon these 8 Career Readiness competencies. After that, your Career Education Specialist (CES) can help you demonstrate these acquired skills and experiences in your resume.</p>
 	<div class="alumni-card">
 	<h3>Career Readiness for All Majors:</h3>		
 	<div class="wp-block-columns">
@@ -185,7 +185,7 @@ function uri_careers_render_skills() {
 		$skills .= <<<spec_content
 	<div class="alumni-card">
 	<h3 id="major_specific_head"> $major Skills:</h3>
-	<p>These skills are recommended and ranked by URI alumni with this major.</p>
+	<p class="uri-careers-p">These skills are recommended and ranked by URI alumni with this major.</p>
 	<ol>
 	{$uri_careers_skills_list('skills')}
 	</ol>
