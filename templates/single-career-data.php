@@ -49,7 +49,7 @@ get_header();
 				<div class="career-data">
 
 					<h2 class="jobs">What Can You Do With This Major?</h2>
-					<p>We gathered data from our past graduates and found that most URI alumni who majored in <?php the_title(); ?> go on to work in these industries among others. </p>
+					<p class="uri-careers-p">We gathered data from our past graduates and found that most URI alumni who majored in <?php the_title(); ?> go on to work in these industries among others. </p>
 
 					<?php
 					if ( function_exists( 'uri_cl_shortcode_tabs' ) ) {
