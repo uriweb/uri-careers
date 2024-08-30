@@ -55,6 +55,7 @@ get_header();
 					if ( function_exists( 'uri_cl_shortcode_tabs' ) ) {
 						if ( get_field( 'industry_a_name' ) ) {
 							$industry_a = get_field( 'industry_a_name' );
+							$industry_a_jobs = "";
 
 							if ( get_field( 'industry_a_entry_jobs' ) ) {
 								$industry_a_jobs .= uri_careers_table_template_entry( 'industry_a_entry_jobs' );
@@ -66,6 +67,7 @@ get_header();
 						}
 						if ( get_field( 'industry_b_name' ) ) {
 							$industry_b = get_field( 'industry_b_name' );
+							$industry_b_jobs = "";
 
 							if ( get_field( 'industry_b_entry_jobs' ) ) {
 								$industry_b_jobs = uri_careers_table_template_entry( 'industry_b_entry_jobs' );
@@ -78,6 +80,7 @@ get_header();
 						}
 						if ( get_field( 'industry_c_name' ) ) {
 							$industry_c = get_field( 'industry_c_name' );
+							$industry_c_jobs = "";
 
 							if ( get_field( 'industry_c_entry_jobs' ) ) {
 								$industry_c_jobs .= uri_careers_table_template_entry( 'industry_c_entry_jobs' );
