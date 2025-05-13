@@ -7,7 +7,7 @@
  */
 function uri_careers_render_jobs( $field ) {
 	$i_array = get_field( $field );
-	$t_array = str_getcsv( $i_array, ';' );
+	$t_array = str_getcsv( $i_array, ';', '"', "");
 	$arraylength = count( $t_array );
 	$output3 = null;
 
@@ -44,7 +44,7 @@ function uri_careers_render_jobs( $field ) {
  */
 function uri_careers_skills_list( $name_field ) {
 	$i_array = get_field( $name_field );
-	$t_array = str_getcsv( $i_array, ';' );
+	$t_array = str_getcsv( $i_array, ';', '"', "" );
 	// var_dump( $t_array );
 	$listlength = count( $t_array );
 	global $output;
@@ -60,7 +60,7 @@ function uri_careers_skills_list( $name_field ) {
  */
 function uri_careers_pipelist( $name_field ) {
 	$i_array = get_field( $name_field );
-	$t_array = str_getcsv( $i_array, ';' );
+	$t_array = str_getcsv( $i_array, ';', '"', "" );
 	$output = implode( '&nbsp; &nbsp; | &nbsp; &nbsp;', $t_array );
 	return $output;
 }
